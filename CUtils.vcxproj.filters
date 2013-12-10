@@ -24,13 +24,13 @@
     <ClInclude Include="targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="NetWorkUtils.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="typedefs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="StringUtils.h">
+    <ClInclude Include="utils\NetWorkUtils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\StringUtils.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -38,10 +38,10 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="NetWorkUtils.cpp">
+    <ClCompile Include="utils\NetWorkUtils.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="StringUtils.cpp">
+    <ClCompile Include="utils\StringUtils.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
