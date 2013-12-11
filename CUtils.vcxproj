@@ -43,8 +43,9 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;ANGLE_DX11;WEBRTC_SVNREVISION="Unavailable(issue687)";_WIN32_WINNT=0x0602;WINVER=0x0602;WIN32;_WINDOWS;NOMINMAX;PSAPI_VERSION=1;_CRT_RAND_S;CERT_CHAIN_PARA_HAS_EXTRA_FIELDS;WIN32_LEAN_AND_MEAN;_ATL_NO_OPENGL;_HAS_EXCEPTIONS=0;_SECURE_ATL;CHROMIUM_BUILD;TOOLKIT_VIEWS=1;USE_AURA=1;USE_ASH=1;USE_DEFAULT_RENDER_THEME=1;USE_LIBJPEG_TURBO=1;ENABLE_ONE_CLICK_SIGNIN;ENABLE_REMOTING=1;ENABLE_WEBRTC=1;ENABLE_PEPPER_CDMS;ENABLE_CONFIGURATION_POLICY;ENABLE_INPUT_SPEECH;ENABLE_NOTIFICATIONS;ENABLE_EGLIMAGE=1;__STD_C;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_DEPRECATE;NTDDI_VERSION=0x06020000;ENABLE_TASK_MANAGER=1;ENABLE_EXTENSIONS=1;ENABLE_PLUGIN_INSTALLATION=1;ENABLE_PLUGINS=1;ENABLE_SESSION_SERVICE=1;ENABLE_THEMES=1;ENABLE_AUTOFILL_DIALOG=1;ENABLE_BACKGROUND=1;ENABLE_AUTOMATION=1;ENABLE_GOOGLE_NOW=1;CLD_VERSION=2;ENABLE_FULL_PRINTING=1;ENABLE_PRINTING=1;ENABLE_SPELLCHECK=1;ENABLE_CAPTIVE_PORTAL_DETECTION=1;ENABLE_APP_LIST=1;ENABLE_SETTINGS_APP=1;ENABLE_MANAGED_USERS=1;ENABLE_MDNS=1;WEBRTC_WIN;__STDC_CONSTANT_MACROS;__STDC_FORMAT_MACROS;DYNAMIC_ANNOTATIONS_ENABLED=1;WTF_USE_DYNAMIC_ANNOTATIONS=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalIncludeDirectories>D:\project\git\CUtils;..\interface;C:\Program Files (x86)\Windows Kits\8.0\Include\shared;C:\Program Files (x86)\Windows Kits\8.0\Include\um;C:\Program Files (x86)\Windows Kits\8.0\Include\winrt;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -59,6 +60,8 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalIncludeDirectories>D:\project\git\CUtils;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -73,9 +76,63 @@
   <ItemGroup>
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
-    <ClInclude Include="typedefs.h" />
     <ClInclude Include="utils\NetWorkUtils.h" />
     <ClInclude Include="utils\StringUtils.h" />
+    <ClInclude Include="webrtc\common.h" />
+    <ClInclude Include="webrtc\common_types.h" />
+    <ClInclude Include="webrtc\system_wrappers\interface\aligned_malloc.h" />
+    <ClInclude Include="webrtc\system_wrappers\interface\asm_defines.h" />
+    <ClInclude Include="webrtc\system_wrappers\interface\atomic32.h" />
+    <ClInclude Include="webrtc\system_wrappers\interface\clock.h" />
+    <ClInclude Include="webrtc\system_wrappers\interface\compile_assert.h" />
+    <ClInclude Include="webrtc\system_wrappers\interface\compile_assert_c.h" />
+    <ClInclude Include="webrtc\system_wrappers\interface\condition_variable_wrapper.h" />
+    <ClInclude Include="webrtc\system_wrappers\interface\constructor_magic.h" />
+    <ClInclude Include="webrtc\system_wrappers\interface\cpu_features_wrapper.h" />
+    <ClInclude Include="webrtc\system_wrappers\interface\cpu_info.h" />
+    <ClInclude Include="webrtc\system_wrappers\interface\critical_section_wrapper.h" />
+    <ClInclude Include="webrtc\system_wrappers\interface\data_log.h" />
+    <ClInclude Include="webrtc\system_wrappers\interface\data_log_c.h" />
+    <ClInclude Include="webrtc\system_wrappers\interface\data_log_impl.h" />
+    <ClInclude Include="webrtc\system_wrappers\interface\event_tracer.h" />
+    <ClInclude Include="webrtc\system_wrappers\interface\event_wrapper.h" />
+    <ClInclude Include="webrtc\system_wrappers\interface\file_wrapper.h" />
+    <ClInclude Include="webrtc\system_wrappers\interface\fix_interlocked_exchange_pointer_win.h" />
+    <ClInclude Include="webrtc\system_wrappers\interface\list_wrapper.h" />
+    <ClInclude Include="webrtc\system_wrappers\interface\logging.h" />
+    <ClInclude Include="webrtc\system_wrappers\interface\ref_count.h" />
+    <ClInclude Include="webrtc\system_wrappers\interface\rw_lock_wrapper.h" />
+    <ClInclude Include="webrtc\system_wrappers\interface\scoped_ptr.h" />
+    <ClInclude Include="webrtc\system_wrappers\interface\scoped_refptr.h" />
+    <ClInclude Include="webrtc\system_wrappers\interface\sleep.h" />
+    <ClInclude Include="webrtc\system_wrappers\interface\sort.h" />
+    <ClInclude Include="webrtc\system_wrappers\interface\static_instance.h" />
+    <ClInclude Include="webrtc\system_wrappers\interface\stringize_macros.h" />
+    <ClInclude Include="webrtc\system_wrappers\interface\template_util.h" />
+    <ClInclude Include="webrtc\system_wrappers\interface\thread_wrapper.h" />
+    <ClInclude Include="webrtc\system_wrappers\interface\tick_util.h" />
+    <ClInclude Include="webrtc\system_wrappers\interface\trace.h" />
+    <ClInclude Include="webrtc\system_wrappers\interface\trace_event.h" />
+    <ClInclude Include="webrtc\system_wrappers\source\android\cpu-features.h" />
+    <ClInclude Include="webrtc\system_wrappers\source\condition_variable_event_win.h" />
+    <ClInclude Include="webrtc\system_wrappers\source\condition_variable_native_win.h" />
+    <ClInclude Include="webrtc\system_wrappers\source\critical_section_win.h" />
+    <ClInclude Include="webrtc\system_wrappers\source\data_log_c_helpers_unittest.h" />
+    <ClInclude Include="webrtc\system_wrappers\source\event_win.h" />
+    <ClInclude Include="webrtc\system_wrappers\source\file_impl.h" />
+    <ClInclude Include="webrtc\system_wrappers\source\list_no_stl.h" />
+    <ClInclude Include="webrtc\system_wrappers\source\list_stl.h" />
+    <ClInclude Include="webrtc\system_wrappers\source\move.h" />
+    <ClInclude Include="webrtc\system_wrappers\source\rw_lock_generic.h" />
+    <ClInclude Include="webrtc\system_wrappers\source\rw_lock_win.h" />
+    <ClInclude Include="webrtc\system_wrappers\source\set_thread_name_win.h" />
+    <ClInclude Include="webrtc\system_wrappers\source\spreadsortlib\constants.hpp" />
+    <ClInclude Include="webrtc\system_wrappers\source\spreadsortlib\spreadsort.hpp" />
+    <ClInclude Include="webrtc\system_wrappers\source\thread_win.h" />
+    <ClInclude Include="webrtc\system_wrappers\source\trace_impl.h" />
+    <ClInclude Include="webrtc\system_wrappers\source\trace_win.h" />
+    <ClInclude Include="webrtc\system_wrappers\source\unittest_utilities.h" />
+    <ClInclude Include="webrtc\typedefs.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -84,6 +141,34 @@
     </ClCompile>
     <ClCompile Include="utils\NetWorkUtils.cpp" />
     <ClCompile Include="utils\StringUtils.cpp" />
+    <ClCompile Include="webrtc\system_wrappers\source\aligned_malloc.cc" />
+    <ClCompile Include="webrtc\system_wrappers\source\atomic32_win.cc" />
+    <ClCompile Include="webrtc\system_wrappers\source\clock.cc" />
+    <ClCompile Include="webrtc\system_wrappers\source\condition_variable.cc" />
+    <ClCompile Include="webrtc\system_wrappers\source\condition_variable_event_win.cc" />
+    <ClCompile Include="webrtc\system_wrappers\source\condition_variable_native_win.cc" />
+    <ClCompile Include="webrtc\system_wrappers\source\cpu_features.cc" />
+    <ClCompile Include="webrtc\system_wrappers\source\cpu_info.cc" />
+    <ClCompile Include="webrtc\system_wrappers\source\critical_section.cc" />
+    <ClCompile Include="webrtc\system_wrappers\source\critical_section_win.cc" />
+    <ClCompile Include="webrtc\system_wrappers\source\data_log.cc" />
+    <ClCompile Include="webrtc\system_wrappers\source\data_log_c.cc" />
+    <ClCompile Include="webrtc\system_wrappers\source\data_log_no_op.cc" />
+    <ClCompile Include="webrtc\system_wrappers\source\event.cc" />
+    <ClCompile Include="webrtc\system_wrappers\source\event_tracer.cc" />
+    <ClCompile Include="webrtc\system_wrappers\source\event_win.cc" />
+    <ClCompile Include="webrtc\system_wrappers\source\file_impl.cc" />
+    <ClCompile Include="webrtc\system_wrappers\source\logging.cc" />
+    <ClCompile Include="webrtc\system_wrappers\source\rw_lock.cc" />
+    <ClCompile Include="webrtc\system_wrappers\source\rw_lock_generic.cc" />
+    <ClCompile Include="webrtc\system_wrappers\source\rw_lock_win.cc" />
+    <ClCompile Include="webrtc\system_wrappers\source\sleep.cc" />
+    <ClCompile Include="webrtc\system_wrappers\source\sort.cc" />
+    <ClCompile Include="webrtc\system_wrappers\source\thread.cc" />
+    <ClCompile Include="webrtc\system_wrappers\source\thread_win.cc" />
+    <ClCompile Include="webrtc\system_wrappers\source\tick_util.cc" />
+    <ClCompile Include="webrtc\system_wrappers\source\trace_impl.cc" />
+    <ClCompile Include="webrtc\system_wrappers\source\trace_win.cc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

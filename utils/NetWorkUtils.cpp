@@ -47,7 +47,6 @@ void NetWorkUtils::sendUDPdata(const char *ip, int port, char * data, int data_l
 	sendto(Svr,data,data_len,0,(sockaddr*)&sendAddrSvr,len);
 
 	closesocket(Svr);
-	
 	WSACleanup();
 
 }
@@ -84,16 +83,10 @@ void  NetWorkUtils::recvUDPdata(int port, char *data, int data_len){
 	bind(svr,(sockaddr*)&addr,sockaddr_size);
 
 	//创建客户端地址对象
-
 	SOCKADDR_IN addrClient;
 
-	int nLoop = 10;
-	char * ip;
-
 	recvfrom(svr,data,data_len,0,(sockaddr*)&addrClient,&sockaddr_size);
-	ip = inet_ntoa(addrClient.sin_addr);
-	/*printf("%s\n",ip);
-	printf("%s\n",recvBuf);*/
+	char * ip = inet_ntoa(addrClient.sin_addr);
 
 	closesocket(svr);
 	WSACleanup();
