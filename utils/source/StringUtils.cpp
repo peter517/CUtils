@@ -1,5 +1,5 @@
 #include "StdAfx.h"
-#include "StringUtils.h"
+#include "..\include\StringUtils.h"
 
 
 StringUtils::StringUtils(void)

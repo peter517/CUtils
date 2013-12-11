@@ -1,6 +1,6 @@
 #include "StdAfx.h"
-#include "NetWorkUtils.h"
 #include <winsock.h>
+#include "..\include\NetWorkUtils.h"
 
 
 NetWorkUtils::NetWorkUtils(void)
