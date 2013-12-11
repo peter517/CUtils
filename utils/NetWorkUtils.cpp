@@ -7,7 +7,6 @@ NetWorkUtils::NetWorkUtils(void)
 {
 }
 
-
 NetWorkUtils::~NetWorkUtils(void)
 {
 }
