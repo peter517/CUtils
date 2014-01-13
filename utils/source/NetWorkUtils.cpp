@@ -85,7 +85,7 @@ void  NetWorkUtils::recvUDPdata(int port, char *data, int data_len){
 	SOCKADDR_IN addrClient;
 
 	recvfrom(svr,data,data_len,0,(sockaddr*)&addrClient,&sockaddr_size);
-	char * ip = inet_ntoa(addrClient.sin_addr);
+	//char * ip = inet_ntoa(addrClient.sin_addr);
 
 	closesocket(svr);
 	WSACleanup();
@@ -139,4 +139,39 @@ void  NetWorkUtils::sendBraodcast(int port, char *data, int data_len){
 		err = WSAGetLastError();
 		return ;
 	}
+}
+
+int NetWorkUtils::checkPortUDP( short int nPort )
+{
+	struct sockaddr_in nSockServer;
+
+	WSADATA wsaData;
+
+	int lBusy = 0;
+	int nSocket;
+
+	/* Initialization */
+	if( WSAStartup( 0x0101, &wsaData ) == 0 )
+	{
+		/* Create Socket */
+		nSockServer.sin_family      = AF_INET;
+		nSockServer.sin_port        = htons( nPort );
+		nSockServer.sin_addr.s_addr = inet_addr( "127.0.0.1" );
+
+		/* Check UDP Protocol */
+		nSocket = socket( AF_INET, SOCK_DGRAM, 0 );
+
+		lBusy = ( bind( nSocket, (SOCKADDR FAR *) &nSockServer,
+			sizeof( SOCKADDR_IN ) ) == SOCKET_ERROR );
+
+		/* Close Socket if Busy */
+		if( lBusy )
+			closesocket( nSocket );
+
+		/* Close Winsock */
+		WSACleanup();
+	}
+
+	/* Return */
+	return( lBusy );
 }

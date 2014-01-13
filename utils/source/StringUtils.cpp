@@ -64,3 +64,64 @@ std::string StringUtils::GBKToUTF8( const std::string& strGBK )
 
 	return strOutUTF8; 
 }
+
+const char* StringUtils::GetFileNameFromPath(const char* file)
+{
+	const char* end1 = ::strrchr(file, '/');
+	const char* end2 = ::strrchr(file, '\\');
+	if (!end1 && !end2) 
+		return file;
+	else
+		return (end1 > end2) ? end1 + 1 : end2 + 1;
+}
+
+std::string StringUtils::GetLogInfo(const char* tag, const char* file, int line, const std::string& logStr )
+{
+	std::string logInfo = "";
+	SYSTEMTIME sys; 
+	GetLocalTime( &sys ); 
+
+	char temp[64];
+
+	
+	logInfo.append("[");
+	logInfo.append(GetFileNameFromPath(file));
+	logInfo.append(":");
+	sprintf(temp, "%d", line);
+	logInfo.append(temp);
+	logInfo.append("]");
+
+	logInfo.append(" ");
+
+	logInfo.append("[");
+	sprintf(temp, "%d", sys.wYear);
+	logInfo.append(temp);
+	logInfo.append("-");
+	sprintf(temp, "%d", sys.wMonth);
+	logInfo.append(temp);
+	logInfo.append("-");
+	sprintf(temp, "%d", sys.wDay);
+	logInfo.append(temp);
+	logInfo.append("]");
+	logInfo.append(" ");
+	logInfo.append("[");
+	sprintf(temp, "%d", sys.wHour);
+	logInfo.append(temp);
+	logInfo.append(":");
+	sprintf(temp, "%d", sys.wMinute);
+	logInfo.append(temp);
+	logInfo.append(":");
+	sprintf(temp, "%d", sys.wSecond);
+	logInfo.append(temp);
+	logInfo.append("]");
+
+	logInfo.append(" ");
+	logInfo.append("[");
+	logInfo.append(tag);
+	logInfo.append("]");
+	
+	logInfo.append(": ");
+	logInfo.append(logStr);
+
+	return logInfo;
+}
