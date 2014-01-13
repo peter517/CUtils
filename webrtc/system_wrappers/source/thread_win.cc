@@ -6,7 +6,6 @@
 #include <stdio.h>
 #include <windows.h>
 
-#include "webrtc/system_wrappers/interface/trace.h"
 #include "webrtc/system_wrappers/source/set_thread_name_win.h"
 
 namespace webrtc {
@@ -148,12 +147,10 @@ void ThreadWindows::Run() {
 
   // All tracing must be after event_->Set to avoid deadlock in Trace.
   if (set_thread_name_) {
-    WEBRTC_TRACE(kTraceStateInfo, kTraceUtility, id_,
-                 "Thread with name:%s started ", name_);
+   
     SetThreadName(-1, name_); // -1, set thread name for the calling thread.
   } else {
-    WEBRTC_TRACE(kTraceStateInfo, kTraceUtility, id_,
-                 "Thread without name started");
+   
   }
 
   do {
@@ -166,13 +163,6 @@ void ThreadWindows::Run() {
     }
   } while (alive_);
 
-  if (set_thread_name_) {
-    WEBRTC_TRACE(kTraceStateInfo, kTraceUtility, id_,
-                 "Thread with name:%s stopped", name_);
-  } else {
-    WEBRTC_TRACE(kTraceStateInfo, kTraceUtility, id_,
-                 "Thread without name stopped");
-  }
 
   critsect_stop_->Enter();
 

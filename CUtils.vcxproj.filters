@@ -99,18 +99,6 @@
     <ClInclude Include="webrtc\system_wrappers\interface\critical_section_wrapper.h">
       <Filter>Header Files\webrtc</Filter>
     </ClInclude>
-    <ClInclude Include="webrtc\system_wrappers\interface\data_log.h">
-      <Filter>Header Files\webrtc</Filter>
-    </ClInclude>
-    <ClInclude Include="webrtc\system_wrappers\interface\data_log_c.h">
-      <Filter>Header Files\webrtc</Filter>
-    </ClInclude>
-    <ClInclude Include="webrtc\system_wrappers\source\data_log_c_helpers_unittest.h">
-      <Filter>Header Files\webrtc</Filter>
-    </ClInclude>
-    <ClInclude Include="webrtc\system_wrappers\interface\data_log_impl.h">
-      <Filter>Header Files\webrtc</Filter>
-    </ClInclude>
     <ClInclude Include="webrtc\system_wrappers\interface\event_tracer.h">
       <Filter>Header Files\webrtc</Filter>
     </ClInclude>
@@ -136,9 +124,6 @@
       <Filter>Header Files\webrtc</Filter>
     </ClInclude>
     <ClInclude Include="webrtc\system_wrappers\interface\list_wrapper.h">
-      <Filter>Header Files\webrtc</Filter>
-    </ClInclude>
-    <ClInclude Include="webrtc\system_wrappers\interface\logging.h">
       <Filter>Header Files\webrtc</Filter>
     </ClInclude>
     <ClInclude Include="webrtc\system_wrappers\source\move.h">
@@ -192,18 +177,6 @@
     <ClInclude Include="webrtc\system_wrappers\interface\tick_util.h">
       <Filter>Header Files\webrtc</Filter>
     </ClInclude>
-    <ClInclude Include="webrtc\system_wrappers\interface\trace.h">
-      <Filter>Header Files\webrtc</Filter>
-    </ClInclude>
-    <ClInclude Include="webrtc\system_wrappers\interface\trace_event.h">
-      <Filter>Header Files\webrtc</Filter>
-    </ClInclude>
-    <ClInclude Include="webrtc\system_wrappers\source\trace_impl.h">
-      <Filter>Header Files\webrtc</Filter>
-    </ClInclude>
-    <ClInclude Include="webrtc\system_wrappers\source\trace_win.h">
-      <Filter>Header Files\webrtc</Filter>
-    </ClInclude>
     <ClInclude Include="webrtc\typedefs.h">
       <Filter>Header Files\webrtc</Filter>
     </ClInclude>
@@ -228,9 +201,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="webrtc\system_wrappers\source\aligned_malloc.cc">
-      <Filter>Source Files\webrtc</Filter>
-    </ClCompile>
-    <ClCompile Include="webrtc\system_wrappers\source\trace_win.cc">
       <Filter>Source Files\webrtc</Filter>
     </ClCompile>
     <ClCompile Include="webrtc\system_wrappers\source\atomic32_win.cc">
@@ -260,15 +230,6 @@
     <ClCompile Include="webrtc\system_wrappers\source\critical_section_win.cc">
       <Filter>Source Files\webrtc</Filter>
     </ClCompile>
-    <ClCompile Include="webrtc\system_wrappers\source\data_log.cc">
-      <Filter>Source Files\webrtc</Filter>
-    </ClCompile>
-    <ClCompile Include="webrtc\system_wrappers\source\data_log_c.cc">
-      <Filter>Source Files\webrtc</Filter>
-    </ClCompile>
-    <ClCompile Include="webrtc\system_wrappers\source\data_log_no_op.cc">
-      <Filter>Source Files\webrtc</Filter>
-    </ClCompile>
     <ClCompile Include="webrtc\system_wrappers\source\event.cc">
       <Filter>Source Files\webrtc</Filter>
     </ClCompile>
@@ -279,9 +240,6 @@
       <Filter>Source Files\webrtc</Filter>
     </ClCompile>
     <ClCompile Include="webrtc\system_wrappers\source\file_impl.cc">
-      <Filter>Source Files\webrtc</Filter>
-    </ClCompile>
-    <ClCompile Include="webrtc\system_wrappers\source\logging.cc">
       <Filter>Source Files\webrtc</Filter>
     </ClCompile>
     <ClCompile Include="webrtc\system_wrappers\source\rw_lock.cc">
@@ -306,9 +264,6 @@
       <Filter>Source Files\webrtc</Filter>
     </ClCompile>
     <ClCompile Include="webrtc\system_wrappers\source\tick_util.cc">
-      <Filter>Source Files\webrtc</Filter>
-    </ClCompile>
-    <ClCompile Include="webrtc\system_wrappers\source\trace_impl.cc">
       <Filter>Source Files\webrtc</Filter>
     </ClCompile>
     <ClCompile Include="utils\source\NetWorkUtils.cpp">

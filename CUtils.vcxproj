@@ -101,15 +101,11 @@
     <ClInclude Include="webrtc\system_wrappers\interface\cpu_features_wrapper.h" />
     <ClInclude Include="webrtc\system_wrappers\interface\cpu_info.h" />
     <ClInclude Include="webrtc\system_wrappers\interface\critical_section_wrapper.h" />
-    <ClInclude Include="webrtc\system_wrappers\interface\data_log.h" />
-    <ClInclude Include="webrtc\system_wrappers\interface\data_log_c.h" />
-    <ClInclude Include="webrtc\system_wrappers\interface\data_log_impl.h" />
     <ClInclude Include="webrtc\system_wrappers\interface\event_tracer.h" />
     <ClInclude Include="webrtc\system_wrappers\interface\event_wrapper.h" />
     <ClInclude Include="webrtc\system_wrappers\interface\file_wrapper.h" />
     <ClInclude Include="webrtc\system_wrappers\interface\fix_interlocked_exchange_pointer_win.h" />
     <ClInclude Include="webrtc\system_wrappers\interface\list_wrapper.h" />
-    <ClInclude Include="webrtc\system_wrappers\interface\logging.h" />
     <ClInclude Include="webrtc\system_wrappers\interface\ref_count.h" />
     <ClInclude Include="webrtc\system_wrappers\interface\rw_lock_wrapper.h" />
     <ClInclude Include="webrtc\system_wrappers\interface\scoped_ptr.h" />
@@ -121,13 +117,10 @@
     <ClInclude Include="webrtc\system_wrappers\interface\template_util.h" />
     <ClInclude Include="webrtc\system_wrappers\interface\thread_wrapper.h" />
     <ClInclude Include="webrtc\system_wrappers\interface\tick_util.h" />
-    <ClInclude Include="webrtc\system_wrappers\interface\trace.h" />
-    <ClInclude Include="webrtc\system_wrappers\interface\trace_event.h" />
     <ClInclude Include="webrtc\system_wrappers\source\android\cpu-features.h" />
     <ClInclude Include="webrtc\system_wrappers\source\condition_variable_event_win.h" />
     <ClInclude Include="webrtc\system_wrappers\source\condition_variable_native_win.h" />
     <ClInclude Include="webrtc\system_wrappers\source\critical_section_win.h" />
-    <ClInclude Include="webrtc\system_wrappers\source\data_log_c_helpers_unittest.h" />
     <ClInclude Include="webrtc\system_wrappers\source\event_win.h" />
     <ClInclude Include="webrtc\system_wrappers\source\file_impl.h" />
     <ClInclude Include="webrtc\system_wrappers\source\list_no_stl.h" />
@@ -139,8 +132,6 @@
     <ClInclude Include="webrtc\system_wrappers\source\spreadsortlib\constants.hpp" />
     <ClInclude Include="webrtc\system_wrappers\source\spreadsortlib\spreadsort.hpp" />
     <ClInclude Include="webrtc\system_wrappers\source\thread_win.h" />
-    <ClInclude Include="webrtc\system_wrappers\source\trace_impl.h" />
-    <ClInclude Include="webrtc\system_wrappers\source\trace_win.h" />
     <ClInclude Include="webrtc\system_wrappers\source\unittest_utilities.h" />
     <ClInclude Include="webrtc\typedefs.h" />
   </ItemGroup>
@@ -164,14 +155,10 @@
     <ClCompile Include="webrtc\system_wrappers\source\cpu_info.cc" />
     <ClCompile Include="webrtc\system_wrappers\source\critical_section.cc" />
     <ClCompile Include="webrtc\system_wrappers\source\critical_section_win.cc" />
-    <ClCompile Include="webrtc\system_wrappers\source\data_log.cc" />
-    <ClCompile Include="webrtc\system_wrappers\source\data_log_c.cc" />
-    <ClCompile Include="webrtc\system_wrappers\source\data_log_no_op.cc" />
     <ClCompile Include="webrtc\system_wrappers\source\event.cc" />
     <ClCompile Include="webrtc\system_wrappers\source\event_tracer.cc" />
     <ClCompile Include="webrtc\system_wrappers\source\event_win.cc" />
     <ClCompile Include="webrtc\system_wrappers\source\file_impl.cc" />
-    <ClCompile Include="webrtc\system_wrappers\source\logging.cc" />
     <ClCompile Include="webrtc\system_wrappers\source\rw_lock.cc" />
     <ClCompile Include="webrtc\system_wrappers\source\rw_lock_generic.cc" />
     <ClCompile Include="webrtc\system_wrappers\source\rw_lock_win.cc" />
@@ -180,8 +167,6 @@
     <ClCompile Include="webrtc\system_wrappers\source\thread.cc" />
     <ClCompile Include="webrtc\system_wrappers\source\thread_win.cc" />
     <ClCompile Include="webrtc\system_wrappers\source\tick_util.cc" />
-    <ClCompile Include="webrtc\system_wrappers\source\trace_impl.cc" />
-    <ClCompile Include="webrtc\system_wrappers\source\trace_win.cc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
