@@ -31,6 +31,12 @@
     <Filter Include="Source Files\eventsystem">
       <UniqueIdentifier>{f34fca6e-9b96-4e20-957c-0938c425b39f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\log">
+      <UniqueIdentifier>{ba3ab833-ecba-47ce-b7c3-2deb1812881b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\log">
+      <UniqueIdentifier>{6934bf7a-c86a-47fe-8688-7a2c694fd834}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="ReadMe.txt" />
@@ -195,6 +201,9 @@
     <ClInclude Include="eventsystem\include\EventProcessor.h">
       <Filter>Header Files\eventsystem</Filter>
     </ClInclude>
+    <ClInclude Include="log\include\log4z.h">
+      <Filter>Header Files\log</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -280,6 +289,9 @@
     </ClCompile>
     <ClCompile Include="eventsystem\source\EventProcessor.cpp">
       <Filter>Source Files\eventsystem</Filter>
+    </ClCompile>
+    <ClCompile Include="log\source\log4z.cpp">
+      <Filter>Source Files\log</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -84,6 +84,7 @@
     <ClInclude Include="eventsystem\include\Event.h" />
     <ClInclude Include="eventsystem\include\EventProcessor.h" />
     <ClInclude Include="eventsystem\include\EventPublisher.h" />
+    <ClInclude Include="log\include\log4z.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="utils\include\NetWorkUtils.h" />
@@ -139,6 +140,7 @@
     <ClCompile Include="eventsystem\source\Event.cpp" />
     <ClCompile Include="eventsystem\source\EventProcessor.cpp" />
     <ClCompile Include="eventsystem\source\EventPublisher.cpp" />
+    <ClCompile Include="log\source\log4z.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
